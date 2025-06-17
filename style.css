@@ -1,28 +1,64 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
-  font-family: serif;
-  text-align: center;
-  background-color: #fefefe;
+  font-family: 'Georgia', serif;
+  background-color: #fefcf7;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* HERO SECTION */
+.hero {
+  position: relative;
+  width: 100%;
+  height: 80vh;
+  overflow: hidden;
 }
 
 .slideshow-container {
   position: relative;
-  max-width: 600px;
-  margin: auto;
-  border: 4px solid #c0a070;
-  border-radius: 10px;
-  overflow: hidden;
-}
-
-.slides {
-  display: none;
   width: 100%;
+  height: 100%;
 }
 
-.fade {
-  animation: fade 1.5s ease-in-out;
+.slide {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
 }
 
-@keyframes fade {
-  from { opacity: 0.4 }
-  to { opacity: 1 }
+.slide.active {
+  opacity: 1;
+}
+
+/* TEXT SECTION */
+.text {
+  padding: 2rem;
+  max-width: 900px;
+  margin: auto;
+  text-align: center;
+}
+
+.text h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: #2c3e50;
+}
+
+.text p {
+  font-size: 1.2rem;
+  color: #555;
+}
+
+/* Optional: Smooth transitions */
+section {
+  transition: all 0.3s ease-in-out;
 }
