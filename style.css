@@ -6,18 +6,20 @@
 }
 
 body {
-  font-family: 'Georgia', serif;
-  background-color: #fefcf7;
+  font-family: serif;
+  text-align: center;
+  background-color: #e4eeee;
   color: #333;
 }
 
-/* HEADER */
+/* HEADER SECTION */
 .header {
   display: flex;
   align-items: center;
+  justify-content: center;
   padding: 1rem 2rem;
-  background-color: #fff;
-  border-bottom: 2px solid #e0e0e0;
+  background-color: #ffffff;
+  border-bottom: 2px solid #cccccc;
 }
 
 .logo {
@@ -27,36 +29,40 @@ body {
 
 .header h1 {
   font-size: 2rem;
-  color: #2c3e50;
+  color: #054862;
 }
 
 /* NAVBAR */
 .topnav {
   display: flex;
   justify-content: center;
-  background-color: #333;
+  background-color: #202223;
   padding: 0.5rem;
+  overflow: hidden;
 }
 
 .topnav a {
-  color: white;
+  color: #f2f2f2;
   padding: 0.7rem 1.2rem;
   text-decoration: none;
   font-weight: bold;
+  font-size: 17px;
 }
 
 .topnav a:hover {
-  background-color: #555;
+  background-color: #e1f4ff;
+  color: black;
 }
 
 .topnav a.active {
-  background-color: #0077b6;
+  background-color: #6dcdda;
+  color: black;
 }
 
-/* MAIN SECTION */
+/* MAIN SECTION (Slideshow + Text) */
 .main-section {
   display: flex;
-  flex-wrap: wrap; /* helps it stack on mobile */
+  flex-wrap: wrap;
   justify-content: center;
   align-items: center;
   gap: 2rem;
@@ -71,7 +77,7 @@ body {
 .text-block h2 {
   font-size: 2rem;
   margin-bottom: 1rem;
-  color: #2c3e50;
+  color: #1e1e1e;
 }
 
 .text-block p {
@@ -81,28 +87,66 @@ body {
 
 /* SLIDESHOW */
 .slideshow-container {
-  width: 500px;
-  height: 300px;
   position: relative;
+  max-width: 600px;
+  margin: auto;
+  border: 4px solid #94774b;
+  border-radius: 10px;
   overflow: hidden;
+  height: 300px;
 }
 
-.slide {
-  position: absolute;
+.slide, .slides {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  display: none;
+  position: absolute;
   opacity: 0;
   transition: opacity 1s ease-in-out;
 }
 
-.slide.active {
+.slide.active, .slides.active {
+  display: block;
   opacity: 1;
+  animation: fade 1.5s ease-in-out;
+}
+
+@keyframes fade {
+  from { opacity: 0.4 }
+  to { opacity: 1 }
+}
+
+/* FOOTER */
+.site-footer {
+  background-color: #f2f2f2;
+  color: #333;
+  text-align: center;
+  padding: 20px;
+  font-size: 14px;
+  border-top: 1px solid #ddd;
+}
+
+.site-footer a {
+  color: #333;
+  text-decoration: underline;
+}
+
+.site-footer a:hover {
+  color: #0077cc;
 }
 
 /* RESPONSIVE */
 @media (max-width: 768px) {
   .main-section {
     flex-direction: column;
+  }
+
+  .header {
+    flex-direction: column;
+  }
+
+  .logo {
+    margin-bottom: 10px;
   }
 }
