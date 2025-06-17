@@ -1,3 +1,17 @@
+/* General Styles */
+body {
+  font-family: Georgia, serif;
+  margin: 0;
+  padding: 0;
+  background-color: #ebf8fb;
+}
+/* NAVIGATION */
+.topnav {
+  overflow: hidden;
+  background-color: #021821;
+  position: relative;
+}
+
 /* Style the links inside the navigation bar */
 .topnav a {
   float: left;
@@ -6,12 +20,12 @@
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
-  font-size: 17px;
+  font-size: 18px;
 }
 
 /* Change the color of links on hover */
 .topnav a:hover {
-  background-color: #033434;
+  background-color: #93bcc5;
   color: black;
 }
 
@@ -81,7 +95,7 @@
   padding: 2rem;
 }
 
-/* TEXT BLOCK */
+/* Text */
 .text-block {
   max-width: 500px;
 }
@@ -99,7 +113,7 @@
 
 * {box-sizing:border-box}
 
-/* Slideshow container */
+/* Slideshow */
 .slideshow-container {
   max-width: 1000px;
   position: relative;
@@ -177,7 +191,7 @@
 /* Fading animation */
 .fade {
   animation-name: fade;
-  animation-duration: 1.5s;
+  animation-duration: 1s;
 }
 
 @keyframes fade {
