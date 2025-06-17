@@ -96,7 +96,7 @@ body {
   height: 300px;
 }
 
-.slide, .slides {
+.slide {
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -106,7 +106,7 @@ body {
   transition: opacity 1s ease-in-out;
 }
 
-.slide.active, .slides.active {
+.slide.active, {
   display: block;
   opacity: 1;
   animation: fade 1.5s ease-in-out;
@@ -115,6 +115,14 @@ body {
 @keyframes fade {
   from { opacity: 0.4 }
   to { opacity: 1 }
+}
+
+.slide {
+  display: block !important;
+  position: static !important;
+  opacity: 1 !important;
+  height: auto;
+  max-width: 100%;
 }
 
 /* FOOTER */
