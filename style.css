@@ -117,14 +117,6 @@ body {
   to { opacity: 1 }
 }
 
-.slide {
-  display: block !important;
-  position: static !important;
-  opacity: 1 !important;
-  height: auto;
-  max-width: 100%;
-}
-
 /* FOOTER */
 .site-footer {
   background-color: #f2f2f2;
