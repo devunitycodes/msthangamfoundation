@@ -1,6 +1,11 @@
 html, body {
   height: 100%;
   margin: 0;
+  box-sizing: border-box;
+}
+
+*, *::before, *::after {
+  box-sizing: inherit;
 }
 
 .page-container {
@@ -20,6 +25,13 @@ body {
   padding: 0;
   background-color: #ebf8fb;
 }
+
+/* Make all images responsive */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
 /* NAVIGATION */
 .topnav {
   overflow: hidden;
@@ -27,7 +39,6 @@ body {
   position: relative;
 }
 
-/* Style the links inside the navigation bar */
 .topnav a {
   float: left;
   display: block;
@@ -38,35 +49,34 @@ body {
   font-size: 18px;
 }
 
-/* Change the color of links on hover */
 .topnav a:hover {
   background-color: #93bcc5;
   color: black;
 }
 
-/* Add an active class to highlight the current page */
 .topnav a.active {
   background-color: #319ba9;
   color: white;
 }
 
-/* Hide the link that should open and close the topnav on small screens */
 .topnav .icon {
   display: none;
 }
 
-/* When the screen is less than 600 pixels wide, hide all links, except for the first one ("Home").*/
 @media screen and (max-width: 600px) {
-  .topnav a:not(:first-child) {display: none;}
+  .topnav a:not(:first-child) {
+    display: none;
+  }
   .topnav a.icon {
     float: right;
     display: block;
   }
 }
 
-/* The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon. Good on small screens */
 @media screen and (max-width: 600px) {
-  .topnav.responsive {position: relative;}
+  .topnav.responsive {
+    position: relative;
+  }
   .topnav.responsive a.icon {
     position: absolute;
     right: 0;
@@ -99,8 +109,7 @@ body {
   color: #054862;
 }
 
-/* SPLIT SECTION  */
-/* Container: flex for side-by-side */
+/* SPLIT SECTION */
 .split-section {
   display: flex;
   flex-wrap: wrap;
@@ -112,40 +121,9 @@ body {
   margin: auto;
 }
 
-/* Text section */
 .text-block {
   flex: 1;
   min-width: 300px;
-}
-
-/* Image section */
-.image-content {
-  flex: 1;
-  min-width: 200px;
-}
-
-.image-content img {
-  width: 100%;
-  height: auto;
-  object-fit: cover;
-  border-radius: 10px; /* Optional: makes image corners rounded */
-}
-
-/* Responsive: stack vertically on smaller screens */
-@media screen and (max-width: 768px) {
-  .split-section {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .text-content, .image-content {
-    width: 100%;
-  }
-}
-
-
-/* Text */
-.text-block {
   max-width: 500px;
 }
 
@@ -160,27 +138,45 @@ body {
   color: #555;
 }
 
-* {box-sizing:border-box}
+.image-content {
+  flex: 1;
+  min-width: 200px;
+}
 
-/* Slideshow */
+.image-content img {
+  width: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+@media screen and (max-width: 768px) {
+  .split-section {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .text-content, .image-content {
+    width: 100%;
+  }
+}
+
+/* SLIDESHOW */
 .slideshow-container {
-  max-width: 1000px;
+  max-width: 800px; /* Change width here */
   position: relative;
   margin: auto;
 }
 
-/* Hide the images by default */
 .mySlides {
   display: none;
 }
 
 .mySlides img {
   width: 100%;
-  height: 400px; /* You can change this to whatever height you like */
-  object-fit: cover; /* This is the crop magic */
+  height: 350px; /* Change height here */
+  object-fit: cover;
 }
 
-/* Next & previous buttons */
 .prev, .next {
   cursor: pointer;
   position: absolute;
@@ -192,27 +188,23 @@ body {
   font-weight: bold;
   font-size: 18px;
   transition: 0.6s ease;
-  border-radius: 0 3px 3px 0;
   user-select: none;
 }
 
-/* Position prev button to the left */
 .prev {
   left: 0;
   border-radius: 0 3px 3px 0;
 }
-/* Position the "next button" to the right */
+
 .next {
   right: 0;
   border-radius: 3px 0 0 3px;
 }
 
-/* On hover, add a black background color with a little bit see-through */
 .prev:hover, .next:hover {
   background-color: rgba(0,0,0,0.8);
 }
 
-/* Caption text */
 .text {
   color: #f2f2f2;
   font-size: 15px;
@@ -223,7 +215,6 @@ body {
   text-align: center;
 }
 
-/* Number text (1/3 etc) */
 .numbertext {
   color: #f2f2f2;
   font-size: 12px;
@@ -232,7 +223,6 @@ body {
   top: 0;
 }
 
-/* The dots/bullets/indicators */
 .dot {
   cursor: pointer;
   height: 15px;
@@ -256,7 +246,6 @@ body {
   background-color: #717171;
 }
 
-/* Fading animation */
 .fade {
   animation-name: fade;
   animation-duration: 1s;
@@ -287,4 +276,3 @@ body {
 .site-footer a:hover {
   color: #0077cc;
 }
-
