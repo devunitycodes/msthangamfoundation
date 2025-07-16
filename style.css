@@ -32,6 +32,14 @@ img {
   height: auto;
 }
 
+.centered-text {
+  max-width: 800px;      /* Limits how wide the text block can get */
+  margin: 0 auto;        /* Centres the block horizontally */
+  padding: 0 20px;       /* Adds 20px padding on left and right */
+  text-align: center;    /* Optional: centres the text inside */
+}
+
+
 /* NAVIGATION */
 .topnav {
   overflow: hidden;
