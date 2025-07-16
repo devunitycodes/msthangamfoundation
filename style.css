@@ -70,6 +70,22 @@ img {
 .topnav .icon {
   display: none;
 }
+/*lANGUAGE SWITCHED CSS*/
+.language-switcher {
+  float: right;
+  padding: 14px 16px;
+  font-size: 14px;
+}
+
+.language-switcher a {
+  color: #f2f2f2;
+  text-decoration: none;
+  margin-left: 10px;
+}
+
+.language-switcher a:hover {
+  text-decoration: underline;
+}
 
 @media screen and (max-width: 600px) {
   .topnav a:not(:first-child) {
