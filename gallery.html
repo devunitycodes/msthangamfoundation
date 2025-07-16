@@ -6,69 +6,77 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-
 </head>
 <body>
 
-  <header class="header">
-    <img src="murugan than.jpg" alt="Foundation Logo" class="logo">
-    <h1>MS Thangam Foundation</h1>
-  </header>
+  <div class="page-container">
 
-  <nav class="topnav">
-    <a  href="index.html">Home</a>
-    <a href="gallery.html" class="active">Gallery</a>
-    <a href="contact.html">Contact Us</a>
-    <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-  <i class="fa fa-bars"></i>
-    </a>
-  </nav>
+    <div class="content-wrap">
 
-  <section class="split-section">
-    <div class="text-block">
-      <h3>Gallery</h3>
-      <p> Every image in this gallery shows hope, kindness, and community. These moments capture the heart of the Msthangam Foundation’s mission. </p>
-    </div>
+      <header class="header">
+        <img src="murugan than.jpg" alt="Foundation Logo" class="logo">
+        <h1>MS Thangam Foundation</h1>
+      </header>
 
-  <div class="image-content">
-    <div class="slideshow-container">
+      <nav class="topnav">
+        <a href="index.html">Home</a>
+        <a href="gallery.html" class="active">Gallery</a>
+        <a href="contact.html">Contact Us</a>
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+          <i class="fa fa-bars"></i>
+        </a>
+      </nav>
 
-      <!-- Slides -->
-      <div class="mySlides fade">
-        <img src="AMMA-APPA-EATING1.jpg"/>
-      </div>
-      <div class="mySlides fade">
-        <img src="WhatsApp Image 2025.jpg"/>
-      </div>
-      <div class="mySlides fade">
-        <img src="eatingfoodjpg.jpg"/>
-      </div>
-     <div class="mySlides fade">
-        <img src="AMMA-APPA_c644af42.jpg"/>
-      </div>
+      <section class="split-section">
 
-      <!-- Arrows -->
-      <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-      <a class="next" onclick="plusSlides(1)">&#10095;</a>
+        <div class="text-block">
+          <h3>Gallery</h3>
+          <p>Every image in this gallery shows hope, kindness, and community. These moments capture the heart of the Msthangam Foundation’s mission.</p>
+        </div>
 
-      <!-- Dots: YES, inside slideshow-container now! -->
-      <div class="dot-container">
-        <span class="dot" onclick="currentSlide(1)"></span>
-        <span class="dot" onclick="currentSlide(2)"></span>
-        <span class="dot" onclick="currentSlide(3)"></span>
-      </div>
+        <div class="image-content">
+          <div class="slideshow-container">
 
-    </div> <!-- This closes slideshow-container -->
-    </div>
+            <!-- Slides -->
+            <div class="mySlides fade">
+              <img src="AMMA-APPA-EATING1.jpg" />
+            </div>
+            <div class="mySlides fade">
+              <img src="WhatsApp Image 2025.jpg" />
+            </div>
+            <div class="mySlides fade">
+              <img src="eatingfoodjpg.jpg" />
+            </div>
+            <div class="mySlides fade">
+              <img src="AMMA-APPA_c644af42.jpg" />
+            </div>
 
+            <!-- Arrows -->
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
 
-    
-  </section>
-  <footer class="site-footer">
-    <a href="https://devbhumicodes.github.io/msthangamfoundation/">MSTHANGAM</a> © 2025 by 
-    <a href="https://github.com/devbhumicodes">B.S</a> is licensed under 
-    <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/">CC BY-NC-ND 4.0</a>
-  </footer>
+            <!-- Dots: now with 4 dots -->
+            <div class="dot-container">
+              <span class="dot" onclick="currentSlide(1)"></span>
+              <span class="dot" onclick="currentSlide(2)"></span>
+              <span class="dot" onclick="currentSlide(3)"></span>
+              <span class="dot" onclick="currentSlide(4)"></span>
+            </div>
+
+          </div> <!-- slideshow-container -->
+        </div> <!-- image-content -->
+
+      </section>
+
+    </div> <!-- content-wrap -->
+
+    <footer class="site-footer">
+      <a href="https://devbhumicodes.github.io/msthangamfoundation/">MSTHANGAM</a> © 2025 by 
+      <a href="https://github.com/devbhumicodes">B.S</a> is licensed under 
+      <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/">CC BY-NC-ND 4.0</a>
+    </footer>
+
+  </div> <!-- page-container -->
 
   <script src="script.js"></script>
 
