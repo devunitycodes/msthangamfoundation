@@ -1,10 +1,10 @@
 // Toggle navigation for mobile view
 function myFunction() {
   const x = document.querySelector(".topnav");
-  if (x.className === "topnav") {
-    x.className += " responsive";
+  if (x.classList.contains("responsive")) {
+    x.classList.remove("responsive");
   } else {
-    x.className = "topnav";
+    x.classList.add("responsive");
   }
 }
 
