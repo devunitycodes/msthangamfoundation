@@ -97,15 +97,17 @@ img {
 }
 
 @media screen and (max-width: 600px) {
-  .nav-links, .language-switcher {
+  .nav-links,
+  .language-switcher {
+    display: none;
     flex-direction: column;
     width: 100%;
-    display: none; /* hide by default */
+    text-align: center;
   }
 
   .topnav.responsive .nav-links,
   .topnav.responsive .language-switcher {
-    display: flex; /* show on hamburger click */
+    display: flex;
   }
 
   .topnav .icon {
@@ -118,7 +120,6 @@ img {
     cursor: pointer;
   }
 
-  /* Center language switcher on mobile */
   .language-switcher {
     order: 1;
     justify-content: center;
