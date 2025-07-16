@@ -272,3 +272,18 @@ body {
 .site-footer a:hover {
   color: #0077cc;
 }
+
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
+.page-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.content-wrap {
+  flex: 1;
+}
