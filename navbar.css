@@ -50,6 +50,7 @@
 
 .icon {
   display: none;
+  color: white; /* or any visible colour like #f2f2f2 or even #93bcc5 */
 }
 
 @media screen and (max-width: 600px) {
