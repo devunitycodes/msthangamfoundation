@@ -43,16 +43,12 @@ img {
 /* NAVIGATION */
 .topnav {
   display: flex;
-  justify-content: space-between; /* left and right groups */
+  justify-content: space-between;
   align-items: center;
   background-color: #021821;
   padding: 0 16px;
   flex-wrap: wrap;
-}
-
-.nav-links {
-  display: flex;
-  gap: 1em;
+  position: relative;
 }
 
 .topnav a {
@@ -73,7 +69,11 @@ img {
   color: white;
 }
 
-/* Language switcher */
+.nav-left {
+  display: flex;
+  gap: 1em;
+}
+
 .language-switcher {
   display: flex;
   align-items: center;
@@ -91,13 +91,13 @@ img {
   text-decoration: underline;
 }
 
-/* Responsive hamburger menu (optional if you're using it) */
-.topnav .icon {
+.icon {
   display: none;
 }
 
+/* MOBILE STYLES */
 @media screen and (max-width: 600px) {
-  .nav-links,
+  .nav-left,
   .language-switcher {
     display: none;
     flex-direction: column;
@@ -105,12 +105,12 @@ img {
     text-align: center;
   }
 
-  .topnav.responsive .nav-links,
+  .topnav.responsive .nav-left,
   .topnav.responsive .language-switcher {
     display: flex;
   }
 
-  .topnav .icon {
+  .icon {
     display: block;
     position: absolute;
     right: 0;
