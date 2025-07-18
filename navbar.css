@@ -10,10 +10,13 @@
 
 .topnav a {
   color: #f2f2f2;
-  text-align: center;
   padding: 14px 16px;
   text-decoration: none;
   font-size: 18px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .topnav a:hover {
@@ -68,8 +71,10 @@
   }
 
     .topnav {
+     min-height: 50px; /* adjust based on how tall you want it */
     background-color: #021821; /* <- reinforce it for small screens */
   }
+
 
     .icon {
     display: block;
