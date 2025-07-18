@@ -1,89 +1,67 @@
+/* Base navbar */
 .topnav {
   display: flex;
-  justify-content: space-between;   /* pushes left + right groups apart */
-  align-items: center;              /* vertically aligns items */
+  justify-content: space-between;
+  align-items: center;
   background-color: #021821;
   padding: 0 16px;
-  flex-wrap: wrap;                  /* allows wrapping on small screens */
-  position: relative;               /* needed for absolute-positioned hamburger */
+  flex-wrap: wrap;
+  position: relative;
 }
 
-.topnav a {
-  color: #f2f2f2;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-  font-size: 18px;
-}
-
-.topnav a:hover {
-  background-color: #93bcc5;
-  color: black;
-}
-
-.topnav a.active {
-  background-color: #319ba9;
-  color: white;
-}
-
-.nav-left {
-  display: flex;
-  gap: 1em;
-}
-
-.language-switcher {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  font-size: 14px;
-  padding: 14px 16px;
-}
-
-.language-switcher a {
-  color: #f2f2f2;
-  text-decoration: none;
-}
-
-.language-switcher a:hover {
-  text-decoration: underline;
-}
-
+/* Hamburger icon (desktop hidden) */
 .icon {
   display: none;
-  color: white; /* or any visible colour like #f2f2f2 or even #93bcc5 */
+  color: #f2f2f2; 
 }
 
+/* Mobile styles */
 @media screen and (max-width: 600px) {
+
+  /* Add vertical padding to navbar so it doesn’t collapse */
+  .topnav {
+    padding: 12px 16px;
+  }
+
+  /* Show and style the hamburger */
+  .icon {
+    display: block;
+    position: absolute;
+    top: 12px;
+    right: 16px;
+    font-size: 24px;      /* bigger so you can see it */
+    line-height: 1;
+    cursor: pointer;
+    z-index: 10;          /* sit above other elements */
+  }
+
+  /* Hide the links until toggled */
   .nav-left,
   .language-switcher {
     display: none;
-    flex-direction: column;
     width: 100%;
+    flex-direction: column;
     text-align: center;
+    margin-top: 8px;
   }
 
+  /* Once you click the icon, show the items */
   .topnav.responsive .nav-left,
   .topnav.responsive .language-switcher {
     display: flex;
   }
 
-    .topnav {
-    background-color: #021821; /* <- reinforce it for small screens */
+  /* Keep the language-switcher at bottom of menu */
+  .language-switcher {
+    order: 2;
+    gap: 0.5em;
+    font-size: 14px;
+    padding-bottom: 12px;
   }
 
-    .icon {
-    display: block;
-    position: absolute;
-    right: 0;
-    top: 0;
-    padding: 14px 16px;
-    color: white;
-    cursor: pointer;
-  }
-
-    .language-switcher {
+  /* Align nav links above the switcher */
+  .nav-left {
     order: 1;
-    justify-content: center;
-    padding: 10px 0;
+    gap: 1em;
   }
 }
