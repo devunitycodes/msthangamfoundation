@@ -1,4 +1,17 @@
- // Toggle for mobile nav
+// Auto-detect and highlight current page link in nav
+window.addEventListener("DOMContentLoaded", function () {
+  const currentPath = window.location.pathname.split("/").pop(); // e.g., 'gallery.html'
+  const navLinks = document.querySelectorAll(".topnav .nav-left a");
+
+  navLinks.forEach(link => {
+    const linkPath = link.getAttribute("href");
+    if (linkPath === currentPath) {
+      link.classList.add("active");
+    }
+  });
+});
+
+// Toggle for mobile nav
   function myFunction() {
     const nav = document.getElementById("myTopnav");
     nav.classList.toggle("responsive");
