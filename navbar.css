@@ -1,11 +1,13 @@
 .topnav {
   display: flex;
-  justify-content: space-between;   /* pushes left + right groups apart */
-  align-items: center;              /* vertically aligns items */
+  justify-content: space-between;
+  align-items: center;
   background-color: #021821;
   padding: 0 16px;
-  flex-wrap: wrap;                  /* allows wrapping on small screens */
-  position: relative;               /* needed for absolute-positioned hamburger */
+  flex-wrap: wrap;
+  position: relative;
+  height: 60px;
+  z-index: 1000;
 }
 
 .topnav a {
@@ -13,10 +15,10 @@
   padding: 14px 16px;
   text-decoration: none;
   font-size: 18px;
-  height: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
+  height: 60px;
 }
 
 .topnav a:hover {
@@ -53,9 +55,12 @@
 
 .icon {
   display: none;
-  color: white; /* or any visible colour like #f2f2f2 or even #93bcc5 */
+  color: white;
+  cursor: pointer;
+  font-size: 26px;
 }
 
+/* Responsive Rules */
 @media screen and (max-width: 600px) {
   .nav-left,
   .language-switcher {
@@ -63,33 +68,29 @@
     flex-direction: column;
     width: 100%;
     text-align: center;
+    background-color: #021821;
   }
 
+.topnav {
+  background-color: #021821;
+}
+  
   .topnav.responsive .nav-left,
   .topnav.responsive .language-switcher {
     display: flex;
   }
 
-    .topnav {
-     min-height: 50px; /* adjust based on how tall you want it */
-    background-color: #021821; /* <- reinforce it for small screens */
-  }
-
-
-    .icon {
+  .icon {
     display: block;
     position: absolute;
     right: 0;
     top: 0;
     padding: 14px 16px;
-    color: white;
-    cursor: pointer;
   }
 
-    .language-switcher {
-    order: 1;
-    justify-content: center;
-    padding: 10px 0;
+  .topnav {
+    flex-direction: column;
+    align-items: stretch;
+    height: auto;
   }
 }
-
