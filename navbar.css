@@ -67,6 +67,10 @@
     display: flex;
   }
 
+    .topnav {
+    background-color: #021821; /* <- reinforce it for small screens */
+  }
+
     .icon {
     display: block;
     position: absolute;
