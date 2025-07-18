@@ -1,9 +1,20 @@
-// Toggle navigation for mobile view
-function myFunction() {
-  const nav = document.getElementById("myTopnav");
-  nav.classList.toggle("responsive");
-}
+<script>
+  // Toggle for mobile nav
+  function myFunction() {
+    const nav = document.getElementById("myTopnav");
+    nav.classList.toggle("responsive");
+  }
 
+  // Highlight active page
+  const links = document.querySelectorAll('.topnav a');
+  const currentPage = window.location.pathname.split('/').pop();
+
+  links.forEach(link => {
+    if (link.getAttribute('href') === currentPage) {
+      link.classList.add('active');
+    }
+  });
+</script>
 // Slideshow logic
 let slideIndex = 1;
 
