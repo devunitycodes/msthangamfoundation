@@ -8,6 +8,10 @@
   position: relative;               /* needed for absolute-positioned hamburger */
 }
 
+.topnav {
+  min-height: 50px; /* adjust based on how tall you want it */
+}
+
 .topnav a {
   color: #f2f2f2;
   text-align: center;
